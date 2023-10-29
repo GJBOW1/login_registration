@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>Home</title>
+</head>
+<body>
+    <div class="column_one">
+        <div class="form">
+            <p class="header">Register:</p>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <p>{{message}}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <form action="/register" method="POST">
+                <label for="first_name">First Name:</label>
+                <input type="text" name="first_name">
+                <br>
+                <label for="last_name">Last Name:</label>
+                <input type="text" name="last_name">
+                <br>
+                <label for="email">Email Address:</label>
+                <input type="text" name="email">
+                <br>
+                <label for="password">New Password:</label>
+                <input type="password" name="password">
+                <br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+    <div class="column_two">
+        <div class="form">
+            <p class="header">Login:</p>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <p>{{message}}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <form action="/login/user" method="POST">
+                <label for="email">Email Address:</label>
+                <input type="text" name="email">
+                <br>
+                <label for="password">Password:</label>
+                <input type="password" name="password">
+                <br><br>
+                <input type="submit" value="Login">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

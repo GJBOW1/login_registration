@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(215, 204, 175);
+}
+
+.column_one {
+    display: flex;
+    flex-direction: column;
+    border: 2px black solid;
+    padding: 3em;
+    background-color: rgb(92, 21, 92);
+    color: white;
+} 
+
+.header {
+    display: flex;
+    font-size: xx-large;
+    align-items: center;
+    justify-content: center;
+    text-decoration: underline;
+    
+}
+
+.form, form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    font-size: x-large;
+}
+
+input {
+    height: 2em;
+    background-color: rgba(250, 248, 100, 0.981);
+}
+
+.column_two {
+    display: flex;
+    flex-direction: column;
+    border: 2px black solid;
+    padding: 3em;
+    background-color: rgb(92, 21, 92);
+    color: white;
+    margin: 4em, 0em, 0em 0em;
+}
